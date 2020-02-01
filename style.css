@@ -27,16 +27,16 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-.time-select{
-	background-color: lightblue;
+.time-display{
+	position: absolute;
+	bottom: 10%;
+	color: white;
+	font-size: 50px;
 }
-.sound-picker{
-	background-color: lightgreen;
-}
-.player-container{
-	background-color: lightcoral;
-}
-
 video{
-	display: none;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	z-index: -10;
 }
