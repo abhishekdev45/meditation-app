@@ -10,6 +10,9 @@ const app = () => {
 	// Time display
 	const timeDisplay = document.querySelector('.time-display');
 
+	// Time select
+	const timeSelect = document.querySelectorAll(".time-select button");
+
 	// Get length of outline
 	const outlineLength = outline.getTotalLength();
 	console.log(outlineLength);
@@ -22,6 +25,14 @@ const app = () => {
 	// play sounds
 	play.addEventListener('click', ()=>{
 		checkPlaying(song);
+	})
+
+	// select sound
+	timeSelect.forEach( option => {
+		option.addEventListener("click", function(){
+			fakeDuration = this.getAttribute("data-time");
+			timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${Math.floor(fakeDuration % 60)}`
+		})
 	})
 
 	// function to play and pause sound
